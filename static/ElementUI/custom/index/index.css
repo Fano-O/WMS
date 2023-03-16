@@ -1,0 +1,52 @@
+.scantext {
+	font-size: 36rpx;
+	margin-left: 24rpx;
+}
+
+.end {
+	position: fixed;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	width: 83% !important;
+}
+
+.admin {
+	bottom: 350rpx;
+}
+
+.scan {
+	bottom: 180rpx;
+}
+
+.copy {
+	position: fixed;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	font-size: 28rpx;
+	bottom: 70rpx;
+}
+
+.by {
+	position: fixed;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	color: #909399;
+	font-size: 24rpx;
+	bottom: 30rpx;
+	justify-content: center;
+}
+
+.btn {
+	margin: 30rpx auto !important;
+}
+
+.poptitle {
+	font-size: 36rpx !important;
+}
+
+.popinput {
+	margin: 30rpx auto !important;
+}

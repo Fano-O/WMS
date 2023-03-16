@@ -1,0 +1,105 @@
+.container {
+	height: 100%;
+	padding: 16rpx 16rpx 16rpx;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.el-card {
+	box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+	width: auto;
+	border-radius: 4px;
+	border: 1px solid #ebeef5;
+	padding: 20px;
+	background-color: #fff;
+	overflow: hidden;
+	color: #303133;
+	transition: .3s;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.mgt12 {
+	margin-top: 12rpx !important;
+}
+
+.mgr16 {
+	margin-right: 16rpx !important;
+}
+
+.mgl8 {
+	margin-left: 8rpx !important;
+}
+
+.pd3 {
+	padding: 3rpx !important;
+}
+
+.pd5 {
+	padding: 5rpx !important;
+}
+
+.mgt32 {
+	margin-top: 32rpx !important;
+}
+
+.mgb32 {
+	margin-bottom: 32rpx !important;
+}
+
+.pdb32 {
+	padding-bottom: 32rpx !important;
+}
+
+.width50 {
+	width: 50% !important;
+}
+
+.width75 {
+	width: 75% !important;
+}
+
+.width80 {
+	width: 80% !important;
+}
+
+.mgauto {
+	margin: 0 auto !important;
+}
+
+.uni-table-th {
+	font-size: 15px !important;
+	color: black !important;
+
+}
+
+.mgb6 {
+	margin-bottom: 6rpx !important;
+}
+
+.mgt18 {
+	margin-top: 18rpx !important;
+}
+
+.pdt6 {
+	padding-top: 6rpx !important;
+}
+
+.pdl5 {
+	padding-left: 5rpx !important;
+}
+
+.mgl16 {
+	margin-left: 16rpx !important;
+}
+
+.mgt72 {
+	margin-top: 72rpx !important;
+}

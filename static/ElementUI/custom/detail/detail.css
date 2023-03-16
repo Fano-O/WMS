@@ -1,0 +1,32 @@
+span {
+	color: #8f9ca2;
+	width: 22%;
+}
+
+.u-input {
+	padding: 0 1rpx !important;
+}
+
+.scrollx {
+	white-space: nowrap !important;
+	overflow-x: scroll;
+}
+
+.u-search {
+	width: 100% !important;
+}
+
+.search {
+	justify-content: flex-end;
+}
+
+.u-textarea {
+	width: 450rpx !important;
+	height: 100rpx !important;
+	padding: 0 !important;
+	padding-left: 5rpx !important;
+}
+
+.u-textarea__field {
+	height: 100rpx !important;
+}
