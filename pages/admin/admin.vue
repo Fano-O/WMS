@@ -7,6 +7,8 @@
 						@change="search(serachv,allArray)"></u-search>
 				</view>
 			</view>
+			<u-modal :show="modal" mode="center" @confirm="modal=false" title="备注" :content="modaltext">
+			</u-modal>
 			<scroll-view scroll-y style="height: 16.95rem">
 				<uni-table>
 					<!-- 表头行 -->
@@ -22,8 +24,6 @@
 						<uni-th width="60px">状态</uni-th>
 					</uni-tr>
 					<!-- 表格数据行 -->
-					<u-modal :show="modal" mode="center" @confirm="modal=false" title="备注" :content="modaltext">
-					</u-modal>
 					<uni-tr v-for="(item, index) in all" :key="index">
 						<uni-td>{{item.params[0].brand}}</uni-td>
 						<uni-td>{{item.params[0].type}}</uni-td>
@@ -79,11 +79,9 @@
 				<u--input type="text" placeholder="请输入品牌" v-model="brand"></u--input>
 			</view>
 			<view class="flex mgt18 pd3 mgauto width80">
-
 				<u--input type="text" placeholder="请输入类型" v-model="type"></u--input>
 			</view>
 			<view class="flex mgt18 pd3 mgauto width80">
-
 				<u--input type="text" placeholder="请输入型号" v-model="model"></u--input>
 			</view>
 			<view class="flex mgt18 pd3 mgauto width80">

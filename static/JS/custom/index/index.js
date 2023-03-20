@@ -51,13 +51,13 @@ export function login() {
 // 转发给朋友
 export function onShareAppMessage() {
 	return {
-		title: '胡职摄影设备管理',
+		title: '摄影设备管理',
 		path: '/pages/index/index',
 	}
 }
 // 转发到朋友圈
 export function onShareTimeline() {
 	return {
-		title: '胡职摄影设备管理'
+		title: '摄影设备管理'
 	}
 }

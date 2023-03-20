@@ -68,8 +68,6 @@
 						<uni-th width="60px">备注</uni-th>
 					</uni-tr>
 					<!-- 表格数据行 -->
-					<u-modal :show="modal" mode="center" @confirm="modal=false" title="备注" :content="modaltext">
-					</u-modal>
 					<uni-tr v-for="(item, index) in record" :key="index">
 						<uni-td>{{item.name}}</uni-td>
 						<uni-td @tap="setClipboard(item.phone)">{{item.phone}}</uni-td>
@@ -83,6 +81,7 @@
 					</uni-tr>
 				</uni-table>
 			</scroll-view>
+			<u-modal :show="modal" mode="center" @confirm="modal=false" title="备注" :content="modaltext"></u-modal>
 		</view>
 	</view>
 </template>
