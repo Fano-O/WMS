@@ -1,0 +1,55 @@
+{
+    "id": 1,
+    "brand": "佳能",
+    "type": "镜头",
+    "model": "EF16-35mm",
+    "serialNo": 6824176,
+    "status": false,
+    "name": null,
+    "phone": null,
+    "remarks": null
+}
+{
+    "id": 2,
+    "brand": "索尼",
+    "type": "镜头",
+    "model": "E28-135mm",
+    "serialNo": 1816162,
+    "status": false,
+    "name": null,
+    "phone": null,
+    "remarks": null
+}
+{
+    "id": 3,
+    "brand": "佳能",
+    "type": "机身",
+    "model": "R7",
+    "serialNo": 54032003766,
+    "status": false,
+    "name": null,
+    "phone": null,
+    "remarks": null
+}
+{
+    "id": 4,
+    "brand": "适马",
+    "type": "镜头",
+    "model": "EF150-600mm",
+    "serialNo": 56312932,
+    "status": false,
+    "name": null,
+    "phone": null,
+    "remarks": null
+}
+{
+    "id": 5,
+    "brand": "大疆",
+    "type": "稳定器",
+    "model": "RS3 PRO",
+    "serialNo": "5DNDK8N00696PO",
+    "status": false,
+    "name": null,
+    "phone": null,
+    "remarks": null
+}

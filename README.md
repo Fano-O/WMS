@@ -28,16 +28,29 @@ WMS是一款使用uni-app开发的轻量级摄影设备管理小程序。
 
 1. 克隆仓库
 ```powershell
-git clone -b master https://github.com/xfanweb/WMS.git
+git clone https://github.com/xfanweb/WMS.git
 ```
 2. 安装依赖
 ```powershell
 npm install
 ```
-3. 打开HBuilder X导入项目
-4. 打开manifest.json获取自己的AppID同时配置好自己的微信小程序AppID
-5. 右键uniCloud文件夹云服务初始化
-6. 点击运行到小程序模拟器安装流程到此结束
+3. 打开HBuilder X导入项目.
+4. 打开manifest.json获取自己的AppID同时配置好自己的微信小程序AppID.
+5. 登录uniCloud后台 https://unicloud.dcloud.net.cn/ 新建服务空间（推荐按量计费）或者选已有空间,新建两个数据库record stock,可将stock.json导入到stock.
+6. 右键uniCloud文件夹云服务初始化,选择刚刚的服务空间.
+7. 点击运行到小程序模拟器安装流程到此结束.
+
+## ✨ 贡献者
+
+- 20届YuYa&Xiaofan编写
+- 21届CreeperNatuDisa&longyu&hoob-y&liuzi维护
+- 后续维护人员敬请期待~
+
+<a href="https://github.com/xfanweb/wms/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=xfanweb/wms" />
+</a>
+
+
 
 ## 📷 截图
 
