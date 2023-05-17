@@ -18,25 +18,32 @@ export function addStock() {
 	let id;
 	execSql('wms', objValue('stock', 'queryStockLength'), (res) => {
 		id = res.result.total + 1
-		execSql('wms', objValue('stock', 'addStock', id, null, null, null, null, null, null, null, that.brand,
-			that.type, that.model, that.serialNo), (res) => {
-			that.brand = "" // 清空输入框
-			that.type = "" // 清空输入框
-			that.model = "" // 清空输入框
-			that.serialNo = "" // 清空输入框
-			if (res.success) {
-				uni.showToast({
-					title: '添加成功',
-					icon: 'success'
-				})
-				that.showadd = false
-			} else {
-				uni.showToast({
-					title: '添加失败',
-					icon: 'error'
-				})
-			}
-		})
+		if(!that.brand || !that.type || !that.model || !that.serialNo){
+			uni.showToast({
+				title: '请检查',
+				icon: 'error'
+			});
+		}else{
+			execSql('wms', objValue('stock', 'addStock', id, null, null, null, null, null, null, null, that.brand,
+				that.type, that.model, that.serialNo), (res) => {
+				that.brand = "" // 清空输入框
+				that.type = "" // 清空输入框
+				that.model = "" // 清空输入框
+				that.serialNo = "" // 清空输入框
+				if (res.success) {
+						uni.showToast({
+							title: '添加成功',
+							icon: 'success'
+						})
+					that.showadd = false
+				} else {
+					uni.showToast({
+						title: '添加失败',
+						icon: 'error'
+					})
+				}
+			})
+		}
 	})
 }
 // 查询全部
