@@ -18,44 +18,54 @@ export function addStock() {
 	let id;
 	execSql('wms', objValue('stock', 'queryStockLength'), (res) => {
 		id = res.result.total + 1
-		if(!that.brand || !that.type || !that.model || !that.serialNo){
+		if (!that.brand || !that.type || !that.model || !that.serialNo) {
 			uni.showToast({
 				title: '请检查',
 				icon: 'error'
 			});
-		}else{
+		} else {
 			execSql('wms', objValue('stock', 'addStock', id, null, null, null, null, null, null, null, that.brand,
 				that.type, that.model, that.serialNo), (res) => {
-				that.brand = "" // 清空输入框
-				that.type = "" // 清空输入框
-				that.model = "" // 清空输入框
-				that.serialNo = "" // 清空输入框
-				if (res.success) {
+					that.brand = "" // 清空输入框
+					that.type = "" // 清空输入框
+					that.model = "" // 清空输入框
+					that.serialNo = "" // 清空输入框
+					if (res.success) {
 						uni.showToast({
 							title: '添加成功',
 							icon: 'success'
 						})
-					that.showadd = false
-				} else {
-					uni.showToast({
-						title: '添加失败',
-						icon: 'error'
-					})
-				}
-			})
+						that.showadd = false
+					} else {
+						uni.showToast({
+							title: '添加失败',
+							icon: 'error'
+						})
+					}
+				})
 		}
 	})
 }
-// 查询全部
-export function queryAll() {
+// 查询库存
+export function queryStock() {
 	let that = this
-	that.showquery = !that.showquery;
-	if (that.showquery) {
-		execSql('wms', objValue('record', 'queryAll'), (res) => {
-			that.all = res.result.data.reverse()
-			that.allArray = that.all
-		})
-	}
+	that.showStatus = false;
+	that.showRecord = false;
+	that.showStock = true;
+	execSql('wms', objValue('stock', 'queryAll'), (res) => {
+		that.stockArray = res.result.data
+	})
+}
+// 查询记录
+export function queryRecord() {
+	let that = this
+	that.showStatus = false;
+	that.showStock = false;
+	that.showRecord = true;
+	execSql('wms', objValue('record', 'queryAll'), (res) => {
+		that.all = res.result.data.reverse()
+		that.allArray = that.all
+	})
 }
 // 模糊搜索
 export function search(v, arr) {
@@ -74,7 +84,7 @@ export function search(v, arr) {
 		let brand = item.params[0].brand
 		let type = item.params[0].type
 		if (name.indexOf(v) !== -1 || phone.indexOf(v) !== -1 || time.indexOf(v) !== -1 || remarks.indexOf(
-				v) !== -1 || brand.indexOf(v) !== -1 || type.indexOf(v) !== -1) {
+			v) !== -1 || brand.indexOf(v) !== -1 || type.indexOf(v) !== -1) {
 			itemarr.push(item) // 符合条件插入到新数组
 		} else {
 			itemarr = itemarr
@@ -87,7 +97,7 @@ export function onPullDownRefresh() {
 	execSql('wms', objValue('stock', 'queryLend'), (res) => {
 		that.lend = res.result.data.reverse() // 根据最新时间进行排序
 	})
-	setTimeout(function() {
+	setTimeout(function () {
 		wx.stopPullDownRefresh()
 	}, 500)
 }
