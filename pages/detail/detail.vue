@@ -20,7 +20,7 @@
 			<view class="flex mgt12 pd3">
 				<span>姓名：</span>
 				<view class="text">
-					<u-input v-model="name" type="text" border="bottom" clearable placeholder="请输入姓名" maxlength="4"
+					<u-input v-model="name" type="text" border="bottom" clearable placeholder="请输入姓名" maxlength="10"
 						:disabled="input" @blur="focus=true" @keydown.enter="focus=true" />
 				</view>
 			</view>
